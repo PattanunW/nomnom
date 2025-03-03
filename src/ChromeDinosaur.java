@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import javax.swing.*;
 
 public class ChromeDinosaur extends JPanel implements ActionListener, KeyListener {
-    int boardWidth = 750;
-    int boardHeight = 250;
+    int boardWidth = 1280;
+    int boardHeight = 768;
 
     //images
     Image dinosaurImg;
@@ -34,7 +34,7 @@ public class ChromeDinosaur extends JPanel implements ActionListener, KeyListene
     //dinosaur
     int dinosaurWidth = 88;
     int dinosaurHeight = 94;
-    int dinosaurX = 50;
+    int dinosaurX = 100;
     int dinosaurY = boardHeight - dinosaurHeight;
 
     Block dinosaur;
@@ -45,7 +45,7 @@ public class ChromeDinosaur extends JPanel implements ActionListener, KeyListene
     int cactus3Width = 102;
 
     int cactusHeight = 70;
-    int cactusX = 700;
+    int cactusX = 1280;
     int cactusY = boardHeight - cactusHeight;
     ArrayList<Block> cactusArray;
 

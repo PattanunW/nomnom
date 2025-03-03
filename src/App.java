@@ -1,8 +1,8 @@
 import javax.swing.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        int boardWidth = 750;
-        int boardHeight = 250;
+        int boardWidth = 1280;
+        int boardHeight = 768;
 
         JFrame frame = new JFrame("Chrome Dinosaur");
         // frame.setVisible(true);
