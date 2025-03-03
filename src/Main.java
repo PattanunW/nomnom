@@ -1,4 +1,7 @@
 
+import java.net.URL;
+
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -15,38 +18,34 @@ public class Main extends Application{
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.setTitle("DinoNaJu");
+		stage.centerOnScreen();
+		stage.setResizable(false);
+		stage.setOnCloseRequest(event -> System.exit(0));
+
+
 		
 		Canvas canvas = new Canvas(1280, 768);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		root.getChildren().add(canvas);
 		
-		String image_path = "file:img/bg.jpg";
-		setBackGround(gc, image_path);
+		setBackGround(gc);
 		
 		stage.show();
 	}
 	
-	public void setBackGround(GraphicsContext gc, String image_path) {
-		System.out.println(image_path);
-		Image bg = new Image(image_path);
-		
+	public void setBackGround(GraphicsContext gc) {
+//		System.out.println(image_path);
+		Image bg = new Image(ClassLoader.getSystemResource("bg.jpg").toString());
 		gc.drawImage(bg, 0, 0, gc.getCanvas().getWidth(), gc.getCanvas().getHeight());
+	}
+	
+	public void drawDinosour(GraphicsContext gc) {
+		Dinosour dinosour = new Dinosour();
 	}
 	
 	
 	
-	
 //    public static void main(String[] args) throws Exception {
-//        int boardWidth = 1280;
-//        int boardHeight = 768;
-//
-//        JFrame frame = new JFrame("Chrome Dinosaur");
-//        // frame.setVisible(true);
-//        frame.setSize(boardWidth, boardHeight);
-//        frame.setLocationRelativeTo(null);
-//        frame.setResizable(false);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//
 //        ChromeDinosaur chromeDinosaur = new ChromeDinosaur();
 //        frame.add(chromeDinosaur);
 //        frame.pack();
