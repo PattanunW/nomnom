@@ -7,7 +7,7 @@ import javafx.animation.Timeline;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
-public class Dinosour extends Block {
+public class Dinosaur extends Block {
 	static Image dinosaurImg = new Image(ClassLoader.getSystemResource("dino-run.gif").toString());
 	static Image dinosaurJumpImg = new Image(ClassLoader.getSystemResource("dino-jump.png").toString());
 	static Image dinosaurDeadImg = new Image(ClassLoader.getSystemResource("dino-dead.png").toString());
@@ -17,7 +17,7 @@ public class Dinosour extends Block {
 	public static int dinosaurX = 100;
 	public static int dinosaurY = boardHeight - dinosaurHeight;
 
-	public Dinosour() {
+	public Dinosaur() {
 		super(dinosaurX, dinosaurY, dinosaurWidth, dinosaurHeight, dinosaurImg);
 		// TODO Auto-generated constructor stub
 	}
